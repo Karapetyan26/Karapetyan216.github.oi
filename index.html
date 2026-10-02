@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Лабораторная работа №1-2 — Карапетян</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+    <!-- ===== ШАПКА ===== -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="https://cdn.culture.ru/images/eae83056-41c8-5963-b6ce-03bca63479ba" alt="Логотип" width="60">
+            </div>
+            <div class="site-title">Karapetyan</div>
+            <nav class="nav">
+                <a href="#table">Таблица</a>
+                <a href="#links">Список ссылок</a>
+                <a href="#form">Форма</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== ОСНОВНОЙ КОНТЕНТ ===== -->
+    <main class="content">
+
+        <!-- Секция 1: Таблица -->
+        <section class="section" id="table">
+            <h2>Таблица</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Заголовок 1</th>
+                            <th>Заголовок 2</th>
+                            <th>Заголовок 3</th>
+                            <th>Заголовок 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Строка 1, ячейка 1</td>
+                            <td>Строка 1, ячейка 2</td>
+                            <td>Строка 1, ячейка 3</td>
+                            <td>Строка 1, ячейка 4</td>
+                        </tr>
+                        <tr>
+                            <td>Строка 2, ячейка 1</td>
+                            <td>Строка 2, ячейка 2</td>
+                            <td>Строка 2, ячейка 3</td>
+                            <td>Строка 2, ячейка 4</td>
+                        </tr>
+                        <tr>
+                            <td>Строка 3, ячейка 1</td>
+                            <td>Строка 3, ячейка 2</td>
+                            <td>Строка 3, ячейка 3</td>
+                            <td>Строка 3, ячейка 4</td>
+                        </tr>
+                        <tr>
+                            <td>Строка 4, ячейка 1</td>
+                            <td>Строка 4, ячейка 2</td>
+                            <td>Строка 4, ячейка 3</td>
+                            <td>Строка 4, ячейка 4</td>
+                        </tr>
+                        <tr>
+                            <td>Строка 5, ячейка 1</td>
+                            <td>Строка 5, ячейка 2</td>
+                            <td>Строка 5, ячейка 3</td>
+                            <td>Строка 5, ячейка 4</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Объединённая ячейка</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Секция 2: Список гиперссылок -->
+        <section class="section" id="links">
+            <h2>Список гиперссылок</h2>
+            <ul>
+                <li>1. <a href="http://www.kubsu.ru/">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+                <li>2. <a href="https://kubsu.ru/">Абсолютная ссылка на главную сайта kubsu.ru в протоколе https</a></li>
+                <li>3. Ссылка-изображение: <br>
+                    <a href="https://www.russianfood.com/recipes/recipe.php?rid=164290">
+                        <img src="https://cdn.culture.ru/images/eae83056-41c8-5963-b6ce-03bca63479ba" width="150" alt="Котик">
+                    </a>
+                </li>
+                <li>4. <a href="about.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+                <li>5. <a href="/">Сокращенная ссылка на главную</a></li>
+                <li>6. <a href="https://www.kubsu.ru/ru/university/departments#:~:text=Все%20факультеты%20КубГУ">Ссылка на фрагмент текущей страницы</a></li>
+                <li>7. <a href="https://kubsu.ru/?page=1&sort=asc&user=test">Ссылка с тремя параметрами в URL</a></li>
+                <li>8. <a href="https://kubsu.ru/?id=12345">Ссылка с параметром id в URL</a></li>
+                <li>9. <a href="page.html">Относительная на страницу в текущем каталоге</a></li>
+                <li>10. <a href="about/about.html">Относительная на страницу в каталоге about</a></li>
+                <li>11. <a href="../page.html">Относительная на страницу в каталоге уровнем выше</a></li>
+                <li>12. <a href="../../page.html">Относительная на страницу двумя уровнями выше</a></li>
+                <li>13. Контекстная в тексте абзаца — здесь можно <a href="https://kubsu.ru/ru/university/departments"><strong>ознакомиться</strong></a> с перечнем факультетов.</li>
+                <li>14. <a href="https://stakanchik.media/article/kak-sobaki-chitayut-mysli-svoix-xozyaev#28">Ссылка на фрагмент страницы стороннего сайта</a></li>
+                <li>15. Ссылки из областей картинки:
+                    <br>
+                    <img src="https://cdn.culture.ru/images/eae83056-41c8-5963-b6ce-03bca63479ba" alt="Карта" usemap="#image-map" width="200" height="200" class="responsive-img">
+                    <map name="image-map">
+                        <area shape="rect" coords="0,0,150,100" href="https://kubsu.ru/ru/studlife/profkom" alt="Прямоугольная область">
+                        <area shape="circle" coords="150,150,50" href="https://kubsu.ru/ru/studlife/sovet-studentov" alt="Круглая область">
+                    </map>
+                </li>
+                <li>16. <a href="">Ссылка с пустым href</a></li>
+                <li>17. <a>Ссылка без href</a></li>
+                <li>18. <a href="https://kubsu.ru/ru/university/departments" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+                <li>19. <a href="https://kubsu.ru/ru/university/departments" rel="noindex">Запрещенная для индексации поисковиками</a></li>
+                <li>20. Нумерованный список ссылок с подписями title:
+                    <ol>
+                        <li><a href="https://kubsu.ru/ru/fktipm" title="ФКТиПМ">Ссылка на сайт ФКТиПМ</a></li>
+                        <li><a href="https://kubsu.ru/ru/fmikn" title="ФМиКН">Ссылка на сайт ФМиКН</a></li>
+                    </ol>
+                </li>
+                <li>21. <a href="ftp://user:password@ftp.example.com/files/document.pdf">Ссылка на файл на сервере FTP с авторизацией</a></li>
+            </ul>
+        </section>
+
+        <!-- Секция 3: Форма -->
+        <section class="section" id="form">
+            <h2>Форма обратной связи</h2>
+            <form id="feedback-form" action="" method="get">
+
+                <label for="name">ФИО:</label>
+                <input id="name" name="name" type="text"
+                       placeholder="Только буквы"
+                       pattern="[А-Яа-яЁёA-Za-z\s\-]+"
+                       title="Имя может содержать только буквы, пробелы и дефис"
+                       required>
+
+                <label for="phone">Телефон:</label>
+                <input id="phone" name="phone" type="tel"
+                       placeholder="+79882345566"
+                       pattern="^(\+7|8)[0-9]{10}$"
+                       title="Введите номер в формате +7XXXXXXXXXX или 8XXXXXXXXXX"
+                       required>
+
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email"
+                       placeholder="example@mail.ru"
+                       required>
+
+                <label for="birthdate">Дата рождения:</label>
+                <input id="birthdate" name="birthdate" type="date" max="2026-12-31" required>
+
+                <p>Пол:
+                    <label><input type="radio" name="gender" value="male" checked> Мужской</label>
+                    <label><input type="radio" name="gender" value="female"> Женский</label>
+                </p>
+
+                <label for="lang">Любимый язык программирования:</label>
+                <select id="lang" name="lang">
+                    <option value="pascal">Pascal</option>
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="haskell">Haskell</option>
+                    <option value="clojure">Clojure</option>
+                    <option value="prolog">Prolog</option>
+                    <option value="scala">Scala</option>
+                </select>
+
+                <label for="bio">Биография:</label>
+                <textarea id="bio" name="bio" rows="6" cols="40"
+                          placeholder="Расскажите о себе..."></textarea>
+
+                <p>С контрактом ознакомлен:
+                    <label><input type="radio" name="contract" value="yes"> Да</label>
+                    <label><input type="radio" name="contract" value="no"> Нет</label>
+                </p>
+
+                <input type="submit" value="Отправить">
+            </form>
+        </section>
+
+        <!-- Кнопка "Наверх" -->
+        <div class="to-top">
+            <a href="#top">↑ Наверх</a>
+        </div>
+
+    </main>
+
+    <!-- ===== ПОДВАЛ ===== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            (с) Карапетян Кристина
+        </div>
+    </footer>
+
+    <!-- ===== ПРОВЕРКА КОНТРАКТА ===== -->
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function (e) {
+            const contractYes = document.querySelector('input[name="contract"][value="yes"]');
+            if (!contractYes.checked) {
+                e.preventDefault();
+                alert('Необходимо ознакомиться с контрактом (выбрать «Да»).');
+            }
+        });
+    </script>
+
+</body>
+</html>
