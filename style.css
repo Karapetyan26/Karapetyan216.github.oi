@@ -56,11 +56,12 @@ body {
     color: #fff;
 }
 
-/* ===== Меню ===== */
+/* ===== Меню (по умолчанию — вертикальное, для мобильных) ===== */
 .nav {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
 }
 
 .nav a {
@@ -68,9 +69,10 @@ body {
     color: #fff;
     font-weight: bold;
     font-size: 1em;
-    padding: 6px 12px;
+    padding: 10px 12px;
     border-radius: 4px;
     transition: background-color 0.2s;
+    text-align: center;
 }
 
 .nav a:hover {
@@ -85,6 +87,21 @@ body {
     margin: 20px auto;
     padding: 0 15px;
     flex-grow: 1;
+}
+
+/* ===== Обёртка для ссылок и таблицы (порядок блоков) ===== */
+.content-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/* На мобильном таблица — первая */
+#table {
+    order: -1;
+}
+
+#links {
+    order: 0;
 }
 
 /* ===== Секции ===== */
@@ -268,10 +285,6 @@ input[type="submit"]:hover {
         margin-left: 10px;
     }
 
-    .nav a {
-        padding: 8px 12px;
-    }
-
     .section {
         padding: 16px;
     }
@@ -298,16 +311,15 @@ input[type="submit"]:hover {
     }
 
     .nav {
-        width: 100%;
-        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
         gap: 6px;
         margin-top: 6px;
     }
 
     .nav a {
-        font-size: 0.9em;
-        padding: 8px 12px;
-        flex: 1 1 auto;
+        font-size: 0.95em;
+        padding: 10px 12px;
         text-align: center;
     }
 
@@ -332,7 +344,6 @@ input[type="submit"]:hover {
         padding-left: 18px;
     }
 
-    /* Таблица: убираем min-width, включаем горизонтальный скролл */
     table {
         min-width: 0;
         font-size: 0.9em;
@@ -343,7 +354,6 @@ input[type="submit"]:hover {
         white-space: nowrap;
     }
 
-    /* Ячейка с объединением — разрешаем перенос */
     td[colspan] {
         white-space: normal;
     }
@@ -359,7 +369,7 @@ input[type="submit"]:hover {
     select,
     textarea {
         padding: 12px;
-        font-size: 16px; /* чтобы iOS не зумил */
+        font-size: 16px;
     }
 
     input[type="submit"] {
@@ -385,11 +395,33 @@ input[type="submit"]:hover {
     }
 
     .nav a {
-        font-size: 0.85em;
-        padding: 7px 8px;
+        font-size: 0.9em;
+        padding: 9px 10px;
     }
 
     .section {
         padding: 12px;
+    }
+}
+
+/* ===== Десктоп: меню горизонтальное, порядок ссылки → таблица ===== */
+@media (min-width: 768px) {
+    .nav {
+        flex-direction: row;
+        width: auto;
+        gap: 10px;
+    }
+
+    .nav a {
+        text-align: left;
+        padding: 6px 12px;
+    }
+
+    #table {
+        order: 0;
+    }
+
+    #links {
+        order: -1;
     }
 }
